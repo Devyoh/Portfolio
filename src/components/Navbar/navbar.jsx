@@ -5,6 +5,9 @@ import Logo from "./../../assets/LOGO.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+
+  
+
   return (
     <nav className="header_navbar flex flex-row bg-gray-800 text-gray-100  p-4 items-center">
       <Link className="basis-1/4 flex flex-column justify-center hover:text-teal-600 w-1/2" to="/">
