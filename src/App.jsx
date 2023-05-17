@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./styles/App.css";
 
 import Home from "./pages/Home/home";
@@ -8,26 +8,56 @@ import Contact from "./pages/Contact/contact";
 import Infos from "./pages/About/about";
 import NotFound from "./pages/NotFound/notFound";
 import Tutoriels from "./pages/Tutoriels/tutoriels";
-import Header from "./components/Header/header";
-import Footer from "./components/Footer/footer";
+import Projects from "./pages/Projects/projects";
+import Project from "./pages/Project/project";
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />
+    },
+    {
+      path: "/tuto",
+      element: <Tutoriels />,
+    },
+    {
+      path: '/projets',
+      element: <Projects />
+    },
+
+    {
+      path: '/projet/:id',
+      element: <Project />
+    },
+
+    {
+      path: '/contact',
+      element: <Contact />
+    },
+    {
+      path: '/about',
+      element: <Infos />
+    },
+    {
+      path: "*",
+      element: <NotFound />
+    },
+    {
+      path: "/connexion",
+      element: <Connexion />
+    },
+    {
+      path: "/inscription",
+      element: <Inscription />
+    },
+  ]);
+  
+
   return (
     <>
-      <div className="App ">
-        <Header/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/connexion" element={<Connexion />} />
-          <Route path="/inscription" element={<Inscription />} />
-          <Route path="*" element={<Navigate replace to="/notFound" />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<Infos />} />
-          <Route path="/tuto" element={<Tutoriels />} />
-          <Route path="/notFound" element={<NotFound />} />
-        </Routes>
-        <Footer/>
-      </div>
+      <RouterProvider router={router}/>
     </>
   );
 }

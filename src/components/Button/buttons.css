@@ -1,0 +1,10 @@
+* {
+    scroll-behavior: smooth;
+}
+
+#up-button{
+	display: none;
+}
+#up-button.show{
+	display: block;
+}

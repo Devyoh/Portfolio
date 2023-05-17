@@ -18,7 +18,6 @@ export default function RegisterForm() {
                     </label>
                     <label htmlFor="">
                         <input type="tel" name="tel" id="" />
-
                     </label>
                     <div>
                         <input type="submit" value="Valider" />
