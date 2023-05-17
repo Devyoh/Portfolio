@@ -1,26 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn, FaMobileAlt,FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn, FaMobileAlt, FaEnvelope } from 'react-icons/fa'
+
+import './aside.css'
 
 export default function asideContact() {
     return (
         <>
             <div className='m-auto text-center'>
                 <ul className='text-center m-auto'>
-                <li className='flex flex-col justify-center '>
+                    <li className='flex flex-col justify-center'>
                         <h2>Par email : </h2>
                         <p> yohan.dev@outlook.fr</p>
-                        <a className='relative bg-slate-700 w-8 h-8 m-auto rounded-3xl hover:bg-teal-600 text-white' href="mailto:yohan.dev@outlook.fr">
-                        <FaEnvelope className="absolute inset-1.5 text-xl" />
+                        <a className='relative bg-slate-700 w-10 h-10 m-auto rounded-3xl hover:bg-teal-600 text-white' href="mailto:yohan.dev@outlook.fr">
+                            <FaEnvelope className="absolute inset-2 text-2xl" />
                         </a>
                     </li>
                     <hr className=" text-stone-50 w-1/6 mx-auto my-3" />
                     <li className='flex flex-col justify-center '>
                         <h2>Par téléphone au : </h2>
                         <p>07 82 88 04 87</p>
-                        <a className='relative bg-slate-700 w-8 h-8 m-auto rounded-3xl hover:bg-teal-600 text-white' href="tel:0782880487">
-                        <FaMobileAlt className="absolute inset-1.5 text-xl" />
+                        <a className='relative bg-slate-700 w-10 h-10 m-auto rounded-3xl hover:bg-teal-600 text-white' href="tel:0782880487">
+                            <FaMobileAlt className="absolute inset-2 text-2xl" />
                         </a>
                     </li>
                     <li>
