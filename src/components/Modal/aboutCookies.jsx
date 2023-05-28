@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function aboutCookies() {
-  return (
-    <div>aboutCookies</div>
-  )
+  return <div>aboutCookies</div>;
 }

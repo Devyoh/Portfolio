@@ -10,56 +10,86 @@ import NotFound from "./pages/NotFound/notFound";
 import Tutoriels from "./pages/Tutoriels/tutoriels";
 import Projects from "./pages/Projects/projects";
 import Project from "./pages/Project/project";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [theme, setTheme] = useState(
+    JSON.parse(localStorage.getItem("theme")) || "light"
+  );
+  const [toggle, setToggle] = useState(false);
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+      setToggle(true);
+    } else {
+      setTheme("light");
+      setToggle(false);
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
+  if(toggle === undefined || toggleTheme === undefined) {
+    console.log('erreur darkmode')
+  }
+
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />
+      element: <Home />,
     },
     {
       path: "/tuto",
       element: <Tutoriels />,
     },
     {
-      path: '/projets',
-      element: <Projects />
+      path: "/projets",
+      element: <Projects />,
     },
 
     {
-      path: '/projet/:id',
-      element: <Project />
+      path: "/projet/:id",
+      element: <Project />,
     },
 
     {
-      path: '/contact',
-      element: <Contact />
+      path: "/contact",
+      element: <Contact />,
     },
     {
-      path: '/about',
-      element: <Infos />
+      path: "/about",
+      element: <Infos />,
     },
     {
       path: "*",
-      element: <NotFound />
+      element: <NotFound />,
     },
     {
       path: "/connexion",
-      element: <Connexion />
+      element: <Connexion />,
     },
     {
       path: "/inscription",
-      element: <Inscription />
+      element: <Inscription />,
     },
   ]);
   
+    return (
+      <>
+        <RouterProvider router={router}>
+          <main className={`h-screen ${theme}`}></main>
+        </RouterProvider>
+      </>
+    );
+  }
 
-  return (
-    <>
-      <RouterProvider router={router}/>
-    </>
-  );
-}
 
 export default App;

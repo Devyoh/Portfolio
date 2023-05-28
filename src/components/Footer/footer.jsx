@@ -26,16 +26,32 @@ export default function Footer() {
             <div className=" flex flex-col md:basis-1/3 m-auto">
               <h2>Mes réseaux :</h2>
               <div className="flex flex-wrap justify-center md:flex-row p-4">
-                <Link target="_blank" to="https://github.com/YohanFrontDev" className="relative bg-slate-700 w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600">
+                <Link
+                  target="_blank"
+                  to="https://github.com/YohanFrontDev"
+                  className="relative bg-slate-700 w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600"
+                >
                   <FaGithub className="absolute inset-2 text-2xl" />
                 </Link>
-                <Link target="_blank" to="https://github.com/YohanFrontDev" className="relative bg-slate-700 w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600">
+                <Link
+                  target="_blank"
+                  to="https://github.com/YohanFrontDev"
+                  className="relative bg-slate-700 w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600"
+                >
                   <FaTwitter className="absolute inset-2 text-2xl" />
                 </Link>
-                <Link target="_blank" to="https://github.com/YohanFrontDev" className="relative bg-slate-700 w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600">
+                <Link
+                  target="_blank"
+                  to="https://github.com/YohanFrontDev"
+                  className="relative bg-slate-700 w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600"
+                >
                   <FaInstagram className="absolute inset-2 text-2xl" />
                 </Link>
-                <Link target="_blank" to="https://github.com/YohanFrontDev" className="relative bg-slate-700 w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600">
+                <Link
+                  target="_blank"
+                  to="https://github.com/YohanFrontDev"
+                  className="relative bg-slate-700 w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600"
+                >
                   <FaLinkedinIn className="absolute inset-2 text-2xl" />
                 </Link>
               </div>
@@ -43,33 +59,32 @@ export default function Footer() {
             <div className=" flex flex-col basis-1/3 m-auto">
               <div className="title-container">
                 <h2>Liens utiles :</h2>
-
               </div>
               <div className="flex  m-auto">
                 <ul>
                   <li>
                     <Link to="/inscription">
-                      <p className=" hover:text-teal-600" >Créer un compte</p>
+                      <p className=" hover:text-teal-600">Créer un compte</p>
                     </Link>
                   </li>
                   <li>
                     <Link to="/connexion">
-                      <p className=" hover:text-teal-600" >Se connecter </p>
+                      <p className=" hover:text-teal-600">Se connecter </p>
                     </Link>
                   </li>
                   <li>
                     <Link to="/tuto">
-                      <p className=" hover:text-teal-600" >Tutoriels </p>
+                      <p className=" hover:text-teal-600">Tutoriels </p>
                     </Link>
                   </li>
                   <li>
                     <Link to="/projets">
-                      <p className=" hover:text-teal-600" >Mes Projets </p>
+                      <p className=" hover:text-teal-600">Mes Projets </p>
                     </Link>
                   </li>
                   <li>
                     <Link to="/contact">
-                      <p className=" hover:text-teal-600" >Me contacter </p>
+                      <p className=" hover:text-teal-600">Me contacter </p>
                     </Link>
                   </li>
                 </ul>
@@ -78,7 +93,9 @@ export default function Footer() {
           </div>
           <div className="flex flex-col py-4 justify-center">
             <p className="sm:text-xs">Mentions légales</p>
-            <p className="sm:text-xs">Copyright © 2022-2023 - Tous droits réservés.</p>
+            <p className="sm:text-xs">
+              Copyright © 2022-2023 - Tous droits réservés.
+            </p>
           </div>
         </div>
       </footer>

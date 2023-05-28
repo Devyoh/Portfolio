@@ -2,13 +2,10 @@ import React from "react";
 import "./header.css";
 import Navbar from "../Navbar/navbar";
 
-
 function Header() {
-  
-
   return (
     <header>
-         <Navbar />
+      <Navbar />
     </header>
   );
 }

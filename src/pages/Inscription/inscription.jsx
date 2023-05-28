@@ -10,17 +10,13 @@ export default function inscription() {
       <Header />
       <main>
         <div>
-          <div>
-
-          </div>
+          <div></div>
           <div>
             <RegisterForm />
           </div>
         </div>
-
       </main>
       <Footer />
     </>
-
-  )
+  );
 }

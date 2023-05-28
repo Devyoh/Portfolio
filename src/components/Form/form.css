@@ -1,14 +1,38 @@
 .bg-form-radient {
-    background: rgb(2,105,113);
-    background: -moz-linear-gradient(180deg, rgba(2,105,113,1) 0%, rgba(0,55,60,0.8463586118040967) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(2,105,113,1) 0%, rgba(0,55,60,0.8463586118040967) 100%);
-    background: linear-gradient(180deg, rgba(2,105,113,1) 0%, rgba(0,55,60,0.8463586118040967) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#026971",endColorstr="#00373c",GradientType=1); 
+  background: rgb(2, 105, 113);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(2, 105, 113, 1) 0%,
+    rgba(0, 55, 60, 0.8463586118040967) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(2, 105, 113, 1) 0%,
+    rgba(0, 55, 60, 0.8463586118040967) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(2, 105, 113, 1) 0%,
+    rgba(0, 55, 60, 0.8463586118040967) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#026971",endColorstr="#00373c",GradientType=1);
 }
 .bg-form-radient-inverse {
-    background: rgb(2,105,113);
-    background: -moz-linear-gradient(360deg, rgba(2,105,113,1) 0%, rgba(0,55,60,0.8463586118040967) 100%);
-    background: -webkit-linear-gradient(360deg, rgba(2,105,113,1) 0%, rgba(0,55,60,0.8463586118040967) 100%);
-    background: linear-gradient(360deg, rgba(2,105,113,1) 0%, rgba(0,55,60,0.8463586118040967) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#026971",endColorstr="#00373c",GradientType=1); 
+  background: rgb(2, 105, 113);
+  background: -moz-linear-gradient(
+    360deg,
+    rgba(2, 105, 113, 1) 0%,
+    rgba(0, 55, 60, 0.8463586118040967) 100%
+  );
+  background: -webkit-linear-gradient(
+    360deg,
+    rgba(2, 105, 113, 1) 0%,
+    rgba(0, 55, 60, 0.8463586118040967) 100%
+  );
+  background: linear-gradient(
+    360deg,
+    rgba(2, 105, 113, 1) 0%,
+    rgba(0, 55, 60, 0.8463586118040967) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#026971",endColorstr="#00373c",GradientType=1);
 }

@@ -5,9 +5,6 @@ import Logo from "./../../assets/Logo/LOGO.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-
-  
-
   return (
     <nav className="header_navbar flex flex-row bg-gray-800 text-gray-100 justify-around p-4 ">
       <Link className=" flex flex-column  hover:text-teal-600 " to="/">
@@ -25,8 +22,6 @@ export default function Navbar() {
       <Link className=" hover:text-teal-600" to="/connexion">
         <h3 className="">Mon Compte</h3>
       </Link>
-      
-      
     </nav>
   );
 }
