@@ -7,7 +7,7 @@ import theme from "../../components/Button/themeButton";
 import Aside from "../../components/Aside/asideContact";
 import ThemeButton from "../../components/Button/themeButton";
 
-export default function contact() {
+export default function Contact() {
   return (
     <>
       <Header />

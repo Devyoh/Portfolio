@@ -9,7 +9,7 @@ export default function tutoriels() {
   return (
     <>
       <Header />
-      <main className="container min-h-full">
+      <main className="container h-screen">
         <Gallery />
       </main>
       <Footer />

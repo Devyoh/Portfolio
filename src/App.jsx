@@ -2,8 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./styles/App.css";
 
 import Home from "./pages/Home/home";
-import Connexion from "./pages/Connexion/connexion";
-import Inscription from "./pages/Inscription/inscription";
+import Register from "./pages/Register/register";
 import Contact from "./pages/Contact/contact";
 import Infos from "./pages/About/about";
 import NotFound from "./pages/NotFound/notFound";
@@ -11,8 +10,10 @@ import Tutoriels from "./pages/Tutoriels/tutoriels";
 import Projects from "./pages/Projects/projects";
 import Project from "./pages/Project/project";
 import { useEffect, useState } from "react";
+import Dashboard from "./pages/DashBoard/dashboard";
 
 function App() {
+
   const [theme, setTheme] = useState(
     JSON.parse(localStorage.getItem("theme")) || "light"
   );
@@ -36,10 +37,9 @@ function App() {
     document.body.className = theme;
   }, [theme]);
 
-  if(toggle === undefined || toggleTheme === undefined) {
+  if (toggle === undefined || toggleTheme === undefined) {
     console.log('erreur darkmode')
   }
-
 
   const router = createBrowserRouter([
     {
@@ -73,23 +73,21 @@ function App() {
       element: <NotFound />,
     },
     {
-      path: "/connexion",
-      element: <Connexion />,
+      path: "/dashboard",
+      element: <Dashboard />,
     },
     {
-      path: "/inscription",
-      element: <Inscription />,
+      path: "/register",
+      element: <Register />,
     },
   ]);
-  
-    return (
-      <>
-        <RouterProvider router={router}>
-          <main className={`h-screen ${theme}`}></main>
-        </RouterProvider>
-      </>
-    );
-  }
+
+  return (
+    <>
+      <RouterProvider router={router}/>
+    </>
+  );
+}
 
 
 export default App;

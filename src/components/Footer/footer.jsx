@@ -60,15 +60,15 @@ export default function Footer() {
               <div className="title-container">
                 <h2>Liens utiles :</h2>
               </div>
-              <div className="flex  m-auto">
+              <div className="flex m-auto">
                 <ul>
                   <li>
-                    <Link to="/inscription">
-                      <p className=" hover:text-teal-600">Créer un compte</p>
+                    <Link to="/register">
+                      <p className=" hover:text-teal-600">S'enregistrer</p>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/connexion">
+                    <Link to="/login">
                       <p className=" hover:text-teal-600">Se connecter </p>
                     </Link>
                   </li>

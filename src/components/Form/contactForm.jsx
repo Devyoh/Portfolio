@@ -9,12 +9,13 @@ export default function ContactForm() {
           action="submit"
           method="post"
         >
-          <label htmlFor="Entrez votre email">
+          <label  htmlFor="Entrez votre email">
             <input
               className="border rounded-sm p-1"
               type="email"
               placeholder="Saisissez votre Email"
               name="email"
+              autoFocus
               id=""
             />
           </label>

@@ -19,7 +19,7 @@ export default function Navbar() {
       <Link className=" hover:text-teal-600" to="/about">
         <h3 className="">À propos</h3>
       </Link>
-      <Link className=" hover:text-teal-600" to="/connexion">
+      <Link className=" hover:text-teal-600" to="/dashboard">
         <h3 className="">Mon Compte</h3>
       </Link>
     </nav>
