@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./login.css";
-import Header from "../../components/Header/header";
-import Footer from "../../components/Footer/footer";
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
@@ -37,8 +35,6 @@ export default function Login({ setToken }) {
 
   return (
     <>
-      <Header />
-      <main>
         <div className=" m-auto w-full flex">
         <div className="title-form min-w-max w-1/4 max-w-full m-auto text-center">
           <form
@@ -88,8 +84,6 @@ export default function Login({ setToken }) {
           </form>
         </div>
         </div>
-      </main>
-      <Footer />
     </>
   );
 }

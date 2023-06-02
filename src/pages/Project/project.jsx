@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import projects from "../../data/projects";
 import { Link, useParams } from "react-router-dom";
-import Header from "../../components/Header/header";
-import Footer from "../../components/Footer/footer";
 import Slider from "../../components/Slider/slider";
 import Tag from "../../components/Tag/tag";
 import { FaGithub } from "react-icons/fa";
@@ -27,8 +25,6 @@ export default function Project() {
 
   return (
     <>
-      <Header />
-      <main className="container m-auto">
         <div className="h-screen mx-auto flex flex-col">
           <div className=" text-center m-auto">
             <h1 className="font-bold font-serif">{title}</h1>
@@ -76,8 +72,6 @@ export default function Project() {
             </div>
           </div>
         </div>
-      </main>
-      <Footer />
     </>
   );
 }

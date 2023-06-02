@@ -36,7 +36,7 @@ export default function RegisterForm() {
 
   return (
     <>
-      <div className=" flex">*
+      <div className=" flex">
         <div className="title-form min-w-max w-1/4 max-w-full m-auto text-center">
           <form
             className=" flex flex-col p-10 my-10 rounded-xl bg-form-radient"
