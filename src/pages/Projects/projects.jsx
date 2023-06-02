@@ -1,4 +1,3 @@
-import ScrollButton from "../../components/Button/ScrollButton";
 import ProjectCard from "../../components/Card/projectCard";
 import Footer from "../../components/Footer/footer";
 import Header from "../../components/Header/header";
@@ -8,7 +7,6 @@ export default function Projects() {
   return (
     <>
       <Header />
-      <ScrollButton />
       <main className={`h-full container m-auto p-5 ${theme}`}>
         <div className="m-auto p-5">
           <div className="text-center">

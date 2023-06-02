@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { BsToggleOff, BsToggleOn } from "react-icons/bs";
-
+import Switch from '@mui/material/Switch/Switch';
 import "./buttons.css";
 
 export default function ThemeButton() {
+
   const [theme, setTheme] = useState(
     JSON.parse(localStorage.getItem("theme")) || "light"
   );
+
   const [toggle, setToggle] = useState(false);
 
   const toggleTheme = () => {
@@ -26,13 +27,13 @@ export default function ThemeButton() {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-if(toggle === undefined) {console.log('erreur darkmode')}
+
+
+  if (toggle === undefined) { console.log('erreur darkmode') }
+
   return (
     <>
-      <button onClick={toggleTheme}>
-        {theme === "light" && <BsToggleOff size={"25px"} />}
-        {theme === "dark" && <BsToggleOn size={"24px"} />}
-      </button>
+      <Switch onClick={toggleTheme} defaultChecked />
       <h1>Hello World</h1>
     </>
   );

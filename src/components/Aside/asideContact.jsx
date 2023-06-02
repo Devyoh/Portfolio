@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import {
   FaGithub,
@@ -19,10 +20,10 @@ export default function asideContact() {
         <ul className="text-center m-auto">
           <li className="flex flex-col justify-center">
             <h2>Par email : </h2>
-            <p> yohan.dev@outlook.fr</p>
+            <p> yoh-prodev@outlook.fr </p>
             <a
               className="relative bg-slate-700 w-10 h-10 m-auto rounded-3xl hover:bg-teal-600 text-white"
-              href="mailto:yohan.dev@outlook.fr"
+              href="mailto:yoh-prodev@outlook.fr"
             >
               <FaEnvelope className="absolute inset-2 text-2xl" />
             </a>

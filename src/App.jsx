@@ -11,6 +11,7 @@ import Projects from "./pages/Projects/projects";
 import Project from "./pages/Project/project";
 import { useEffect, useState } from "react";
 import Dashboard from "./pages/DashBoard/dashboard";
+import ScrollButton from "./components/Button/ScrollButton";
 
 function App() {
 
@@ -79,11 +80,12 @@ function App() {
     {
       path: "/register",
       element: <Register />,
-    },
+    }
   ]);
 
   return (
     <>
+      <ScrollButton />
       <RouterProvider router={router}/>
     </>
   );

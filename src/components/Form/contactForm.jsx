@@ -1,61 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
+import toggle from '../Button/themeButton'
+
+
+console.log(toggle)
 
 export default function ContactForm() {
+  const [lastName, setLastName] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [email, setEmail] = useState('')
+  const [tel, setTel] = useState('')
+  const [message, setMessage] = useState('')
+  const [fake_field, setFakeField] = useState('')
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();    
+  }
+
   return (
     <>
       <div>
         <form
-          className="rounded-xl bg-form-radient flex flex-col space-y-2 m-auto text-center py-5"
+          className="rounded-xl bg-form-radient flex flex-col space-y-2 m-auto py-5"
           action="submit"
           method="post"
+          onSubmit={handleSubmit}
         >
-          <label  htmlFor="Entrez votre email">
-            <input
-              className="border rounded-sm p-1"
-              type="email"
-              placeholder="Saisissez votre Email"
-              name="email"
-              autoFocus
-              id=""
+          <h1 className="text-center">Contactez moi directement</h1>
+          <div className="flex flex-row w-4/5 m-auto justify-around" >
+         
+            <div className="flex flex-col p-5">
+              <label className="text-left" htmlFor="lastName">Nom*</label>
+              <input
+                required
+                className="border rounded-sm p-1"
+                placeholder="Votre nom"
+                type="text"
+                id="lastName"
+                name="lastName"
+                autoFocus
+                value={lastName}
+                onChange={e => setLastName(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col p-5">
+              <label className="text-left" htmlFor="firstName">Prénom*</label>
+              <input
+                required
+                className="border rounded-sm p-1"
+                placeholder="Votre prénom"
+                type="text"
+                id="firstName"
+                name="firstName"
+                
+                value={firstName}
+                onChange={e => setFirstName(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="flex flex-row w-4/5 m-auto justify-around">
+            <div className="flex flex-col p-5">
+              <label className="text-left" htmlFor="email">Email*</label>
+              <input
+                className="border rounded-sm p-1"
+                placeholder="Votre adresse e-mail"
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col p-5">
+              <label className="text-left" htmlFor="tel">Téléphone*</label>
+              <input
+                required
+                className="border rounded-sm p-1"
+                type="tel"
+                placeholder="Fixe ou portable"
+                name="tel"
+                onChange={e => setTel(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col p-5 w-4/5 m-auto">
+            <label className="text-left" htmlFor="message">Votre message</label>
+            <textarea
+              maxLength={1200}
+              className="w-full h-32 max-h-72 m-auto p-1"
+              id="message"
+              name="message"
+              value={message}
+              placeholder="Merci de bien vouloir détailler votre demande"
+              onChange={e => setMessage(e.target.value)}
             />
-          </label>
-          <label htmlFor="">
-            <input
-              className="border rounded-sm p-1"
-              type="text"
-              placeholder="Saisissez votre Nom"
-              name="nom"
-              id=""
-            />
-          </label>
-          <label htmlFor="">
-            <input
-              className="border rounded-sm p-1"
-              type="text"
-              placeholder="Saisissez votre Prénom"
-              name="prénom"
-              id=""
-            />
-          </label>
-          <label htmlFor="tel">
-            <input
-              className="border rounded-sm p-1"
-              type="tel"
-              placeholder="ex: 0565656565"
-              name="tel"
-              id=""
-            />
-          </label>
-          <label htmlFor="png">
-            <input
-              type="file"
-              name="png"
-              id=""
-              aria-errormessage="Veuillez sélectionner un fichier au format 'PNG','JPEG' ou 'JPG'"
-            />
-          </label>
-          <button className="bg-form-radient w-1/3 p-1 m-auto rounded-md text-white hover:bg-slate-900">
-            <span>Envoyer</span>
+          </div>
+          <input type="hidden" name="fake_field" value={fake_field} onChange={e => setFakeField(e.target.value)} />
+          <button
+            className="bg-form-radient w-1/3 p-1 m-auto rounded-md text-white hover:bg-slate-900"
+            type="submit">
+            Envoyer
           </button>
         </form>
       </div>

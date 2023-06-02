@@ -68,8 +68,8 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/login">
-                      <p className=" hover:text-teal-600">Se connecter </p>
+                    <Link to="/dashboard">
+                      <p className=" hover:text-teal-600">Mon compte</p>
                     </Link>
                   </li>
                   <li>
