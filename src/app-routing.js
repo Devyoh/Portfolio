@@ -14,6 +14,9 @@ export default function AppRouting() {
     const Dashboard = React.lazy(() => import("./pages/DashBoard/dashboard"));
     const Projects = React.lazy(() => import("./pages/Projects/projects"));
     const Project = React.lazy(() => import("./pages/Project/project"));
+    const Statistic = React.lazy(() => import("./components/Statistics/statistic"));
+    const MyAccount = React.lazy(() => import("./components/MyAccount/myAccount"));
+    const Settings = React.lazy(() => import("./components/Settings/settings"));
 
     return (
         <>
@@ -24,7 +27,11 @@ export default function AppRouting() {
                 <Route path="tuto/*" element={<Suspense fallback={<>...</>}><Tutoriel /></Suspense>} />
                 <Route path="register/*" element={<Suspense fallback={<>...</>}><Register /></Suspense>} />
                 <Route path="contact/*" element={<Suspense fallback={<>...</>}><Contact /></Suspense>} />
-                <Route path="dashboard/*" element={<Suspense fallback={<>...</>}><Dashboard /></Suspense>} />
+                <Route path="dashboard/" element={<Suspense fallback={<>...</>}><Dashboard /></Suspense>} >
+                    <Route path="infos" element={<Suspense fallback={<>...</>}><MyAccount /></Suspense>} />
+                    <Route path="stats" element={<Suspense fallback={<>...</>}><Statistic /></Suspense>} />
+                    <Route path="settings" element={<Suspense fallback={<>...</>}><Settings /></Suspense>} />
+                </Route>
                 <Route path="projets/*" element={<Suspense fallback={<>...</>}><Projects /></Suspense>} />
                 <Route path="projet/:id/*" element={<Suspense fallback={<>...</>}><Project /></Suspense>} />
             </Routes>

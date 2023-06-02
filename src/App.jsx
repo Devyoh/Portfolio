@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import ScrollButton from "./components/Button/ScrollButton";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
-import Main from "./components/Main/main";
+import AppRooting from "./app-routing";
 
 function App() {
 
@@ -36,14 +36,11 @@ function App() {
     console.log('erreur darkmode')
   }
 
- 
-
   return (
     <>
       <ScrollButton />
       <Header />
-      <Main>
-      </Main >
+      <AppRooting/>
       <Footer />
     </>
   );

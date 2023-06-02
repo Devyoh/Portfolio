@@ -33,8 +33,8 @@ export default function ThemeButton() {
 
   return (
     <>
-      <Switch onClick={toggleTheme} />
-      <h1>Hello World</h1>
+      {theme === "dark" && <Switch onClick={toggleTheme} defaultChecked />}
+      {theme === "light" && <Switch onClick={toggleTheme} />}
     </>
   );
 }

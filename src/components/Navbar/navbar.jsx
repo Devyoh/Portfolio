@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="header_navbar flex flex-row bg-gray-800 text-gray-100 justify-around p-4 ">
+    <nav className="header_navbar flex flex-row z-10 bg-gray-800 text-gray-100 justify-around p-4 ">
       <Link className=" flex flex-column  hover:text-teal-600 " to="/">
         <img className="" src={Logo} alt="Logo" />
       </Link>

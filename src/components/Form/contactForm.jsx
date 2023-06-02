@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import toggle from '../Button/themeButton'
 
 
-console.log(toggle)
 
 export default function ContactForm() {
   const [lastName, setLastName] = useState('')
@@ -23,7 +21,6 @@ export default function ContactForm() {
           className="rounded-xl bg-form-radient flex flex-col space-y-2 m-auto py-5"
           action="submit"
           method="post"
-          onSubmit={handleSubmit}
         >
           <h1 className="text-center">Contactez moi directement</h1>
           <div className="flex flex-row w-4/5 m-auto justify-around" >

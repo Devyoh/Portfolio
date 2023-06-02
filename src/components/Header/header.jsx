@@ -4,7 +4,7 @@ import Navbar from "../Navbar/navbar";
 
 function Header() {
   return (
-    <header>
+    <header className="z-10">
       <Navbar />
     </header>
   );
