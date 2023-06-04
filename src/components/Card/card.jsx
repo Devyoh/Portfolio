@@ -1,17 +1,18 @@
 import React from "react";
 import "./card.css";
 
-export default function Card() {
+export default function Card({title,content}) {
   return (
     <>
       <div className="m-4">
         <div className="header_card">
-          <h2>titre</h2>
+          <h2>{title}</h2>
         </div>
         <div className="body_card">
-          <p>Contenu</p>
+          <p>{content}</p>
         </div>
-        <div className="footer_card"></div>
+        <div className="footer_card">
+        </div>
       </div>
     </>
   );

@@ -18,7 +18,7 @@ export default function asideContact() {
       <div className="m-auto text-center">
         <ul className="text-center m-auto">
           <li className="flex flex-col justify-center">
-            <h2>Par email : </h2>
+            <h2>Mon email : </h2>
             <p> yoh-prodev@outlook.fr </p>
             <a
               className="relative bg-slate-700 w-10 h-10 m-auto rounded-3xl hover:bg-teal-600 text-white"
@@ -29,7 +29,7 @@ export default function asideContact() {
           </li>
           <hr className=" text-stone-50 w-1/6 mx-auto my-3" />
           <li className="flex flex-col justify-center ">
-            <h2>Par téléphone au : </h2>
+            <h2>Mon téléphone au : </h2>
             <p>07 82 88 04 87</p>
             <a
               className="relative bg-slate-700 w-10 h-10 m-auto rounded-3xl hover:bg-teal-600 text-white"
@@ -41,7 +41,7 @@ export default function asideContact() {
           <li>
             <hr className=" text-stone-50 w-1/6 mx-auto my-3" />
             <div className=" flex flex-col md:basis-1/3 m-auto ">
-              <h2>Via mes réseaux :</h2>
+              <h2> Mes réseaux :</h2>
               <div className="flex flex-wrap justify-center md:flex-row p-4 text-white">
                 <Link
                   target="_blank"

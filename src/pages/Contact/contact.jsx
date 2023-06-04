@@ -7,21 +7,20 @@ import Banner from "../../components/Banner/banner";
 export default function Contact() {
   return (
     <>
-        <div className="flex flex-col">
-          <Banner/>
-          <div className="container flex flex-row m-auto p-5">
-            <div className="basis-2/3">
-              <div className="text-center" >
-              <h1>Envie de mettre en ligne un projet ? </h1>
-              <p> Demandez un devis en ligne ! </p>
-              </div>
-              <ContactForm />
+      <div className="flex flex-col">
+        <Banner />
+        <div className="container flex flex-row m-auto p-5">
+          <div className="basis-2/4">
+            <ContactForm />
+          </div>
+          <div className="basis-2/4 m-auto">
+          <div className="text-center my-4" >
+              <p> Pour prendre contact avec moi,<br/> n'hésitez pas à passer via </p>
             </div>
-            <div className="basis-1/3">
-              <Aside />
-            </div>
+            <Aside />
           </div>
         </div>
+      </div>
     </>
   );
 }

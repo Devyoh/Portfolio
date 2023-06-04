@@ -5,7 +5,7 @@ import RegisterForm from "../../components/Form/registerForm";
 export default function Register() {
   return (
     <>
-        <div className="">
+        <div>
             <RegisterForm />
         </div>
     </>

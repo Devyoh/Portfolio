@@ -16,9 +16,9 @@ export default function ContactForm() {
 
   return (
     <>
-      <div>
+      <div className="w-4/5">
         <form
-          className="rounded-xl bg-form-radient flex flex-col space-y-2 m-auto py-5"
+          className="rounded-xl bg-cyan-radient flex flex-col space-y-2 m-auto py-10"
           action="submit"
           method="post"
         >
@@ -93,7 +93,7 @@ export default function ContactForm() {
           </div>
           <input type="hidden" name="fake_field" value={fake_field} onChange={e => setFakeField(e.target.value)} />
           <button
-            className="bg-form-radient w-1/3 p-1 m-auto rounded-md text-white hover:bg-slate-900"
+            className="bg-cyan-radient w-1/3 p-1 m-auto rounded-md text-white hover:bg-slate-900"
             type="submit">
             Envoyer
           </button>

@@ -8,7 +8,8 @@ export default function Dashboard({ userName }) {
 
     const { token, setToken } = useToken();
 
-    const location = useLocation();
+    const location = useLocation(); 
+    const currentRoute = location.pathname;
 
     if (!token) {
         return <Login setToken={setToken} />
@@ -17,28 +18,28 @@ export default function Dashboard({ userName }) {
     return (
         <>
             <div className={` h-screen flex flex-row`}>
-                <div className='relative w-1/5 overflow-hidden'>
-                    <nav className='flex flex-col justify-between w-40 h-full text-center bg-gray-700 '>
-                        <ul className=' flex flex-col h-screen justify-around'>
-                            <li>
+                <div className='relative w-2/12 overflow-hidden'>
+                    <nav className='flex flex-col justify-between h-full text-center bg-gray-700 '>
+                        <ul className=' flex flex-col h-screen justify-evenly'>
+                            <li className={currentRoute === '/dashboard' ? 'text-teal-600' : ''}>
                                 <Link to="/dashboard">
                                     <FaHome className='m-auto' size={'40px'} />
-                                    <h3> Paramètres </h3>
+                                    <h3> Accueil </h3>
                                 </Link>
                             </li>
-                            <li>
+                            <li className={currentRoute === '/dashboard/infos' ? 'text-teal-600' : ''}>
                                 <Link to="/dashboard/infos">
                                     <FaInfoCircle className='m-auto' size={'40px'} />
                                     <h3> Mes informations </h3>
                                 </Link>
                             </li>
-                            <li>
+                            <li className={currentRoute === '/dashboard/stats' ? 'text-teal-600' : ''}>
                                 <Link to="/dashboard/stats">
                                     <FaChartBar className='m-auto' size={'40px'} />
                                     <h3> Statistiques </h3>
                                 </Link>
                             </li>
-                            <li>
+                            <li className={currentRoute === '/dashboard/settings' ? 'text-teal-600' : ''}>
                                 <Link to="/dashboard/settings">
                                     <FaCog className='m-auto' size={'40px'} />
                                     <h3> Paramètres </h3>
@@ -47,13 +48,8 @@ export default function Dashboard({ userName }) {
                         </ul>
                     </nav>
                 </div>
-                <div className='basis-2/3'>
+                <div className='w-full'>
                     <div className='container m-auto text-center'>
-                        {location.pathname === "/dashboard" &&
-                            <div>
-                                <h2>Bienvenue  {userName} !</h2>
-                            </div>
-                        }
                         <Outlet />
                     </div>
                 </div>

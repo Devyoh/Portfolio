@@ -45,7 +45,6 @@ export default function Project() {
             <div className="description_container">
               <p>{description}</p>
             </div>
-
             <div className="links text-center text-white m-auto p-5 flex justify-center space-x-4">
               <div>
                 <div>
@@ -59,7 +58,7 @@ export default function Project() {
                   <Link
                     target="_blank"
                     to={website}
-                    className="relative bg-slate-800 w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600"
+                    className="relative w-10 h-10 mx-1 rounded-3xl hover:bg-teal-600"
                   >
                     <img
                       src={earth}

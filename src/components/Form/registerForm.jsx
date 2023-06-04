@@ -39,7 +39,7 @@ export default function RegisterForm() {
       <div className=" flex">
         <div className="title-form min-w-max w-1/4 max-w-full m-auto text-center">
           <form
-            className=" flex flex-col p-10 my-10 rounded-xl bg-form-radient"
+            className=" flex flex-col p-10 my-10 rounded-xl bg-cyan-radient"
             action="submit"
             method="post"
           >
@@ -113,7 +113,7 @@ export default function RegisterForm() {
             </div>
             <div className=" flex justify-center">
               <button
-                className=" flex flex-row w-1/3 h-14 justify-center mx-auto my-10 bg-form-radient hover:bg-sky-700 text-xl rounded-3xl text-white text-center"
+                className=" flex flex-row w-1/3 h-14 justify-center mx-auto my-10 bg-cyan-radient hover:bg-sky-700 text-xl rounded-3xl text-white text-center"
                 type="submit"
                 value="Envoyer"
               >

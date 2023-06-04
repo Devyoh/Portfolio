@@ -1,0 +1,33 @@
+
+
+@media screen and (max-width: 768px){
+    .dropdown_content_hidden {
+        opacity: 0%;
+        height: 20px;    
+    }
+    .dropdown img {
+        cursor: pointer;
+        padding: 5px;
+    }
+    .dropdown_content {
+        animation: opacity 1.2s;
+        padding: 5% 3% 10% 3%;
+        line-height: 22px;
+        font-size: 14px;
+        background-color: #F6F6F6;
+        border-radius: 0px 0px 10px 10px;
+        color: #FF6060;
+        margin-bottom: 3%;
+    }
+    .dropdown_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FF6060;
+        color: white;
+        padding: 2.5%;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+}

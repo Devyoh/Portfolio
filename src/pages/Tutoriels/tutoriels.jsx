@@ -1,5 +1,4 @@
 import React from "react";
-import "./tutoriels.css";
 
 import Gallery from "./../../components/Gallery/gallery";
 
